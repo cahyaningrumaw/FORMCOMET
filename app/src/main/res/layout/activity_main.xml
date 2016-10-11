@@ -1,142 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="id.sch.smktelkom_mlg.tugas01.xiirpl1012.formcomet.MainActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/judul"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logocomet" />
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="id.sch.smktelkom_mlg.tugas01.xiirpl1012.formcomet.MainActivity">
 
-    <TextView
-        android:id="@+id/judul"
-        style="@style/Base.TextAppearance.AppCompat.Headline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:text="Registration Form"
-        android:textSize="25dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/judul"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logocomet" />
 
-    <EditText
-        android:id="@+id/etNama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Name" />
+        <TextView
+            android:id="@+id/judul"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="Registration Form"
+            android:textSize="25dp" />
 
-    <RadioGroup
-        android:id="@+id/radioGroupStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textColor="#ff8400"
+            android:textStyle="bold|italic" />
 
-        <RadioButton
-            android:id="@+id/cowok"
+        <RadioGroup
+            android:id="@+id/radioGroupStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/cowok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/cewek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Female" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your class :"
+            android:textColor="#ff8400"
+            android:textStyle="bold|italic" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/Class"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/jumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Competency Request :"
+            android:textColor="#ff8400"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/grammar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="Male" />
+            android:text="Grammar" />
 
-        <RadioButton
-            android:id="@+id/cewek"
+        <CheckBox
+            android:id="@+id/vocab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="Female" />
+            android:text="Vocabulary" />
 
-    </RadioGroup>
+        <CheckBox
+            android:id="@+id/reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Reading" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/Class"
-        android:spinnerMode="dropdown" />
+        <CheckBox
+            android:id="@+id/speaking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Speaking" />
 
-    <TextView
-        android:id="@+id/jumlah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Competency Request :" />
+        <CheckBox
+            android:id="@+id/debating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Debating" />
 
-    <CheckBox
-        android:id="@+id/grammar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:text="Grammar" />
+        <Button
+            android:id="@+id/button"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgbtn"
+            android:text="submit"
+            android:textColor="@android:color/white" />
 
-    <CheckBox
-        android:id="@+id/vocab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:text="Vocabulary" />
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="name" />
 
-    <CheckBox
-        android:id="@+id/reading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:text="Reading" />
+        <TextView
+            android:id="@+id/jk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="gender" />
 
-    <CheckBox
-        android:id="@+id/speaking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:text="Speaking" />
+        <TextView
+            android:id="@+id/kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="class" />
 
-    <CheckBox
-        android:id="@+id/debating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:text="Debating" />
+        <TextView
+            android:id="@+id/req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="minat" />
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Base.TextAppearance.AppCompat.Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bgbtn"
-        android:text="submit"
-        android:textColor="@android:color/white" />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="name" />
-
-    <TextView
-        android:id="@+id/jk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="gender" />
-
-    <TextView
-        android:id="@+id/kelas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="class" />
-
-    <TextView
-        android:id="@+id/req"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="minat" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
