@@ -8,57 +8,62 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
     EditText etNama;
     RadioButton cowok, cewek;
+    Spinner spkelas;
     CheckBox grammar, vocab, reading, speaking, debating;
     Button button;
-    TextView result, jumlah;
-    int jml;
+    TextView result, jk, req, jumlah, kelas;
+    //int jml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         etNama = (EditText) findViewById(R.id.etNama);
         cowok = (RadioButton) findViewById(R.id.cowok);
         cewek = (RadioButton) findViewById(R.id.cewek);
         jumlah = (TextView) findViewById(R.id.jumlah);
+
+        spkelas = (Spinner) findViewById(R.id.spinner);
+
         grammar = (CheckBox) findViewById(R.id.grammar);
         vocab = (CheckBox) findViewById(R.id.vocab);
         reading = (CheckBox) findViewById(R.id.reading);
         speaking = (CheckBox) findViewById(R.id.speaking);
         debating = (CheckBox) findViewById(R.id.debating);
-        //grammar.setOnCheckedChangeListener(this);
-        //vocab.setOnCheckedChangeListener(this);
-        //reading.setOnCheckedChangeListener(this);
-        //speaking.setOnCheckedChangeListener(this);
-        //debating.setOnCheckedChangeListener(this);
+
+        grammar.setOnCheckedChangeListener(this);
+        vocab.setOnCheckedChangeListener(this);
+        reading.setOnCheckedChangeListener(this);
+        speaking.setOnCheckedChangeListener(this);
+        debating.setOnCheckedChangeListener(this);
+
         button = (Button) findViewById(R.id.button);
         result = (TextView) findViewById(R.id.result);
+        jk = (TextView) findViewById(R.id.jk);
+        req = (TextView) findViewById(R.id.req);
 
         button.setOnClickListener(new View.OnClickListener() {
-            {
-                doClick();
-            }
 
-            {
-                doCheck();
-            }
 
             @Override
             public void onClick(View view) {
                 doProcess();
             }
+
         });
     }
 
     private void doCheck() {
         String minat = "Your Requested Competencies are :\n";
-        int startlen = minat.length();
+        //int startlen = minat.length();
         if (grammar.isChecked()) minat += grammar.getText() + "\n";
         if (vocab.isChecked()) minat += vocab.getText() + "\n";
         if (reading.isChecked()) minat += reading.getText() + "\n";
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         if (debating.isChecked()) minat += debating.getText() + "\n";
 
         //if(minat.length()==startlen) minat+="Choice is not exist";
-        result.setText(minat);
+        req.setText(minat);
     }
 
     private void doClick() {
@@ -74,22 +79,25 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         if (cowok.isChecked()) {
             gender = cowok.getText().toString();
-        } else if (cewek.isChecked()) {
+        } else {
             gender = cewek.getText().toString();
         }
-        if (gender == null) {
-            result.setText("Choose your gender");
-        } else {
-            //result.setText("You are a "+gender); // ini belum jadi 1 ya
-        }
-
+        jk.setText("You are a " + gender);
     }
 
     private void doProcess() {
         if (isValid()) {
             String nama = etNama.getText().toString();
-            result.setText("your name is " + nama); // sama yang ini
+            result.setText("Your name is " + nama);
+            doClick();
+            doCheck();
+            doSpin();
         }
+
+    }
+
+    private void doSpin() {
+        kelas.setText("Your grade is " + spkelas.getSelectedItem().toString());
     }
 
     private boolean isValid() {
