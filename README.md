@@ -32,15 +32,11 @@ Deteksi kesalahan : Saat memasukkan nama yang berabjad <3, maka akan muncul pesa
 isian         
 
 ##### Screenshoot Aplikasi
-![Screenshoot 1](SCREENSHOT#FORMCOMET#1.png)
-
-![Screenshoot 2](SCREENSHOT#FORMCOMET#2.png)
-
-![Screenshoot 3](SCREENSHOT#FORMCOMET#3.png)
-
-![Screenshoot 4](SCREENSHOT#FORMCOMET#4.png)
-
-![Screenshoot 5](SCREENSHOT#FORMCOMET#5.png)
+![screenshot formcomet 4](https://cloud.githubusercontent.com/assets/22116762/19316958/96f3a17e-90cd-11e6-98ed-f6a9449916ef.png)
+![screenshot formcomet 5](https://cloud.githubusercontent.com/assets/22116762/19316960/9747d2f8-90cd-11e6-90a9-6ba56eec2c56.png)
+![screenshot formcomet 1](https://cloud.githubusercontent.com/assets/22116762/19316961/9757000c-90cd-11e6-805f-d5c5dcf36f02.png)
+![screenshot formcomet 2](https://cloud.githubusercontent.com/assets/22116762/19316962/9785f90c-90cd-11e6-94a6-ffc53169ea30.png)
+![screenshot formcomet 3](https://cloud.githubusercontent.com/assets/22116762/19316963/9790c4d6-90cd-11e6-8216-27ccab9520dc.png)
 
 ##### Link file apk dari aplikasi
 [FORMCOMET](https://drive.google.com/file/d/0B3jMsq7wCWwYaUw1dFBQYzk5dEk/view?usp=sharing)
