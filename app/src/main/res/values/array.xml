@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="Class">
+    <string-array name="kelas">
         <item>X Programming</item>
         <item>X Networking</item>
         <item>XI Programming</item>

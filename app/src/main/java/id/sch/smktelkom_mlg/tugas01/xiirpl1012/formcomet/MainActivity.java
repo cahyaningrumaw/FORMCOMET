@@ -31,8 +31,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         cewek = (RadioButton) findViewById(R.id.cewek);
         jumlah = (TextView) findViewById(R.id.jumlah);
 
-        spkelas = (Spinner) findViewById(R.id.spinner);
-
+        spkelas = (Spinner) findViewById(R.id.spkelas);
         grammar = (CheckBox) findViewById(R.id.grammar);
         vocab = (CheckBox) findViewById(R.id.vocab);
         reading = (CheckBox) findViewById(R.id.reading);
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     }
 
     private void doCheck() {
-        String minat = "Your Requested Competencies are :\n";
+        String minat = "Your requested competencies :\n";
         //int startlen = minat.length();
         if (grammar.isChecked()) minat += grammar.getText() + "\n";
         if (vocab.isChecked()) minat += vocab.getText() + "\n";
@@ -90,8 +89,9 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             String nama = etNama.getText().toString();
             result.setText("Your name is " + nama);
             doClick();
+            //doSpin();
             doCheck();
-            doSpin();
+
         }
 
     }
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     private void doSpin() {
         kelas.setText("Your grade is " + spkelas.getSelectedItem().toString());
     }
+
 
     private boolean isValid() {
         boolean valid = true;
